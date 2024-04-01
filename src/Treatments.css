@@ -3,7 +3,7 @@
   }
 
 .Treatments-header {
-    background-image: url('background-image/BG2.png');
+    background-image: url('background-image/BG2.jpg');
   background-size: cover;  
   background-position: center;
   min-height: 100vh;
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #ffffff;
+  color: #000000;
   }
   .Treatments-header h2 {
     top: 0;
@@ -38,6 +38,16 @@
   }
   .result {
     text-align: left;
-    color: #fae8e8;
+    color: #424242;
 
+  }
+  .About{
+    background-image: url('background-image/BG3.jpg');
+    background-size: cover;  
+    background-position: center;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+    text-align: center;
+    color: #424242;
   }

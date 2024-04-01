@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import Footer from './footer';
 import './App.css';
 
 function Home() {
@@ -62,8 +63,6 @@ function Home() {
       navigate(`/treatment/spider veins`);
     } else if (classificationResult.predictedClass === 'Normal Legs') {
       navigate(`/treatment/normal legs`);
-    } else {
-      navigate(`/treatment/undefined`);
     }
   };
 
@@ -79,7 +78,7 @@ function Home() {
             <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" className="imageInput" />
             </form>
             <p>2.Then click the "Classfiy Image" button to analyse the image and get classification  output.</p>
-            <p>3.Click the "Clear" button ro clear the selected image and try anthor </p>
+            <p>3.Click the "Clear" button ro clear the selected image and try anthor image.</p>
           </div>
           <div className="upload">
             <form onSubmit={handleSubmit}>
@@ -88,19 +87,33 @@ function Home() {
             </form>
             {previewUrl && <img src={previewUrl} alt="Preview" className="imagePreview" />}
           </div>
-          <div className="results">
-            {classificationResult.predictedClass && (
-                <div className="resultContainer">
-                <p>Classification Result: {classificationResult.predictedClass}</p>
-                <p>Confidence Level: {`${(classificationResult.confidence * 100).toFixed(2)}%`}</p>
-                <button type="button" onClick={handleViewTreatment} className="viewTreatmentButton">
-                  View Treatment
-                </button>
-          </div>
-            )}
+              <div className="results">
+                  {classificationResult.predictedClass && (
+                    <div className="resultContainer">
+                      <p>Classification Result: {classificationResult.predictedClass}</p>
+                      <p>Confidence Level: {`${(classificationResult.confidence * 100).toFixed(2)}%`}</p>
+                      {(classificationResult.predictedClass === 'Varicose Veins' ||
+                        classificationResult.predictedClass === 'Spider Veins' ||
+                        classificationResult.predictedClass === 'Normal Legs') && (
+                        <button type="button" onClick={handleViewTreatment} className="viewTreatmentButton">
+                          View Treatment
+                        </button>
+                      )}
+                      {(classificationResult.predictedClass !== 'Varicose Veins' &&
+                        classificationResult.predictedClass !== 'Spider Veins' &&
+                        classificationResult.predictedClass !== 'Normal Legs') && (
+                        <div>
+                          <p>The image you uploaded cannot be defined as a leg image.</p>
+                          <p>Please upload a suitable image for classification.</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
           </div>
         </div>
       </header>
+      <Footer />
     </div>
   );
 }
