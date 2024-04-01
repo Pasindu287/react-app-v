@@ -59,12 +59,13 @@
 .upload, .results {
   flex: 1;
   padding: 2%;
+  align-items: center;
   box-sizing: border-box;  
 }
 
 .imagePreview {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 100%; 
+  height: auto;
 }
 .classifyButton {
   background-color: #4CAF50; 
@@ -135,6 +136,9 @@
 @media screen and (max-width: 480px) {
   .App-main-header, .App-footer {
     padding: 5px 20px; 
+  }
+  .App-header {
+    display: flex;
   }
 
   .App-header h1 {
