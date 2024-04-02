@@ -127,7 +127,7 @@
   max-width: 400px; 
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1200px) {
   .App-main-header, .App-footer {
     padding: 5px 150px; 
    }
@@ -165,29 +165,33 @@
 }
 
 .App-footer a {
-  color: #508ba7; /* Light blue link for a pop of color */
-  text-decoration: none; /* Removes underline from links */
-  font-weight: bold; /* Makes links stand out */
+  color: #508ba7; 
+  text-decoration: none; 
+  font-weight: bold; 
 }
 
 .App-footer a:hover, .App-footer a:focus {
-  text-decoration: underline; /* Adds underline on hover/focus for clarity */
-  color: #fff; /* Changes link color to white on hover/focus */
+  text-decoration: underline; 
+  color: #fff; 
 }
 
 .nav-links {
   list-style: none;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li {
   display: inline;
   margin-right: 20px;
 }
-
+.nav-links li:last-child {
+  margin-right: 0; 
+}
 .nav-links li a {
   text-decoration: none;
-  color: #FFF; /* Adjust color as needed */
+  color: #FFF; 
   font-weight: bold;
 }
 
@@ -195,3 +199,8 @@
   text-decoration: underline;
 }
 
+.App-main-header img.icon {
+  height: 40px; 
+  width: auto; 
+  vertical-align: middle; 
+}

@@ -22,24 +22,20 @@ function Home() {
       setPreviewUrl('');
     }
   };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!selectedFile) {
       alert('Please select a file first!');
       return;
     }
-
     const formData = new FormData();
     formData.append('file', selectedFile);
-
     try {
       const response = await axios.post('https://flask-app-varicose-veins-0391fbbc0894.herokuapp.com//predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-
       setClassificationResult({
         confidence: response.data.confidence,
         predictedClass: response.data.predicted_class,
@@ -49,13 +45,6 @@ function Home() {
       alert(`An error occurred: ${error.message}`);
     }
   };
-
-  const handleClear = () => {
-    setSelectedFile(null);
-    setClassificationResult({});
-    setPreviewUrl('');
-    fileInputRef.current.value = ''; 
-  };
   const handleViewTreatment = () => {
     if (classificationResult.predictedClass === 'Varicose Veins') {
       navigate(`/treatment/varicose veins`);
@@ -64,6 +53,12 @@ function Home() {
     } else if (classificationResult.predictedClass === 'Normal Legs') {
       navigate(`/treatment/normal legs`);
     }
+  };
+  const handleClear = () => {
+    setSelectedFile(null);
+    setClassificationResult({});
+    setPreviewUrl('');
+    fileInputRef.current.value = ''; 
   };
 
   return (
