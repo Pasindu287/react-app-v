@@ -56,16 +56,22 @@
   box-sizing: border-box;
 }
 
-.upload, .results {
+.upload {
   flex: 1;
   padding: 2%;
   align-items: center;
   box-sizing: border-box;  
 }
+.results{
+  flex: 1;
+  padding: 2%;
+  align-items: center;
+  box-sizing: border-box; 
+}
 
 .imagePreview {
-  max-width: 100%; 
-  height: auto;
+  max-width: 500px; 
+  height: 500px;
 }
 .classifyButton {
   background-color: #4CAF50; 
@@ -199,8 +205,3 @@
   text-decoration: underline;
 }
 
-.App-main-header img.icon {
-  height: 40px; 
-  width: auto; 
-  vertical-align: middle; 
-}
