@@ -14,7 +14,7 @@
   font-family: 'Arial', sans-serif; 
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: relative; 
-  width: 100%;
+  width: auto;
   bottom: 0;
 }
 
@@ -127,7 +127,7 @@
   max-width: 400px; 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 400px) {
   .App-main-header, .App-footer {
     padding: 5px 150px; 
    }
@@ -160,7 +160,7 @@
   font-family: 'Arial', sans-serif; 
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: relative; 
-  width: 100%;
+  width: auto;
   bottom: 0;
 }
 
