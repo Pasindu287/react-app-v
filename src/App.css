@@ -1,21 +1,18 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-.App-main-header {
-  text-align: left;
-  padding: 5px 100px;
-  background-color: #d6d4b1; 
-  color: #fff; 
-  font-family: 'Arial', sans-serif; 
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-  position: relative; 
-  width: auto;
-  bottom: 0;
 }
 
 .App-header {
@@ -23,7 +20,7 @@
   background-size: cover; 
   background-position: bottom;
   min-height: 100vh;
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -32,14 +29,11 @@
 }
 .App-header h1 {
   position: relative;
-  top: 10px;
-  left: 0;
   width: 100%;
-  margin: 0;
-  padding: 0px 0;
   color: #282c34;
   text-align: center;
-  z-index: 1000;
+  margin: 0px;
+  z-index: 100;
 }
 
 .content {
@@ -48,6 +42,7 @@
   justify-content: space-around;
   flex-wrap: wrap; 
   width: 100%;
+  height: fit-content;
 }
 .instructions {
   font-size: 20px; 
@@ -70,7 +65,7 @@
 }
 
 .imagePreview {
-  max-width: 500px; 
+  max-width: 400px; 
   height: 500px;
 }
 .classifyButton {
@@ -86,10 +81,10 @@
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
-  background-color: #d6d4b1; 
+  background-color: #cfcc94; 
   color: white;
   border-radius: 10px; 
-  border: 2px solid #d6d4b1; 
+  border: 2px solid #cfcc94; 
   font-size: 16px;
   transition: background-color 0.3s, color 0.3s; 
 }
@@ -134,34 +129,21 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .App-main-header, .App-footer {
+   .App-footer {
     padding: 5px 150px; 
    }
 }
 
 @media screen and (max-width: 480px) {
-  .App-main-header, .App-footer {
+   .App-footer {
     padding: 5px 20px; 
   }
-  .App-header {
-    display: flex;
-  }
-
-  .App-header h1 {
-    font-size: clamp(16px, 8vw, 22px);
-  }
-
-  .nav-links li {
-    margin-right: 10px;
-  }
 }
-.App-link {
-  color: #508ba7;
-}
+
 .App-footer {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #d6d4b1; 
+  padding: 50px 10px;
+  background-color: #cfcc94; 
   color: #fff; 
   font-family: 'Arial', sans-serif; 
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);

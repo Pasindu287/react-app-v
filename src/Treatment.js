@@ -39,7 +39,7 @@ function Treatment() {
       case 'varicose veins':
         return (
           <div>
-          <p>Managing varicose veins at home involves strategies similar to those for spider veins, with a focus on alleviating symptoms, improving blood flow, and preventing the condition from worsening. Here’s a tailored plan for varicose veins:</p>
+          <p>Managing varicose veins at home involves lifestyle changes and home remedies that may help alleviate symptoms and prevent varicose veins from forming, with a focus on alleviating symptoms, improving blood flow, and preventing the condition from worsening. Here’s a tailored plan for varicose veins:</p>
           
           <ul>
             <li><strong>Exercise Regularly:</strong> Boost circulation in your legs, helping the veins move blood back to the heart. Low-impact exercises like walking, cycling, and swimming are particularly beneficial.</li>

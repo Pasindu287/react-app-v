@@ -68,7 +68,7 @@ function Home() {
         <div className="content">
           <div className="instructions">
             <h2>Instructions :</h2>
-            <p>1. Upload to varicose veins image to classifed.<> </>(Please provide image with only .jpg or .jpeg extentions.) </p>
+            <p>1. Upload to varicose veins image to classifed.</p>
             <form onSubmit={handleSubmit}>
             <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" className="imageInput" />
             </form>

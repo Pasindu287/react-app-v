@@ -17,7 +17,6 @@ function App() {
         <Route path="/treatment/:level" element={<Treatment />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      
     </div>
     </BrowserRouter>
   );
